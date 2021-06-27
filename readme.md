@@ -15,5 +15,17 @@ yarn add react react-dom
 yarn add @babel/preset-react -D
 
 yarn add cross-env -D
- 
+
+yarn add ts-loader -D
+yarn add typescript -D
+
+npx tsc --init
+yarn add eslint -D
+yarn add prettier -D
+
+
+yarn add eslint-plugin-react@latest -D//didn't use
+
+//
+
 ```

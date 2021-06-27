@@ -1,15 +1,18 @@
 // import './style.css';
+import './style.scss';
 
-import { render } from 'react-dom';
-import App from './components/App';
+// import { render } from 'react-dom';
+// import App from './components/App';
 
-render(<App></App>, document.getElementById('root'));
+// render(<App></App>, document.getElementById('root'));
+
+//
 // render(<h1>Hello React</h1>, document.getElementById('root'));
 
-// const headline = 'Welcome to the webpage';
-// document.querySelector('h1').innerText = headline;
+const headline = 'Welcome to the webpage';
+document.querySelector('h1').innerText = headline;
 
-// console.log(hello);
+console.log(hello);
 
 // const inok = {
 //   name: 1,

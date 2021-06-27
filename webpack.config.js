@@ -16,13 +16,21 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  entry: './packages/index.js',
+  entry: './packages/index.ts',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+        },
+        include: [path.resolve(__dirname, 'packages')],
+      },
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
