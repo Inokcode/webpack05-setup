@@ -24,7 +24,7 @@ yarn add eslint -D
 yarn add prettier -D
 
 
-yarn add eslint-plugin-react@latest -D//didn't use
+yarn add eslint-plugin-react@latest -D//
 
 //
 
