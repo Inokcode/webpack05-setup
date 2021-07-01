@@ -1,13 +1,2 @@
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-var __webpack_exports__ = {};
-/*!***************************!*\
-  !*** ./packages/index.ts ***!
-  \***************************/
-
-const age = 100;
-console.log(age);
-
-/******/ })()
-;
+!function(){"use strict";console.log(100)}();
 //# sourceMappingURL=bundle.js.map

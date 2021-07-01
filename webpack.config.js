@@ -1,5 +1,5 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // const target = 'web';
 // const mode =
@@ -7,19 +7,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //     ? ('production', (target = 'browserslist'))
 //     : 'development';
 
-let mode = 'development';
-let target = 'web';
+let mode = "development";
+let target = "web";
 
-if (process.env.NODE_ENV === 'production') {
-  mode = 'production';
-  target = 'browserslist';
+if (process.env.NODE_ENV === "production") {
+  mode = "production";
+  target = "browserslist";
 }
 
 module.exports = {
-  entry: './packages/index.ts',
+  entry: "./packages/index.ts",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -27,37 +27,39 @@ module.exports = {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
+          loader: "ts-loader",
         },
-        include: [path.resolve(__dirname, 'packages')],
+        include: [path.resolve(__dirname, "packages")],
       },
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-          'postcss-loader',
+          "css-loader",
+          "sass-loader",
+          "postcss-loader",
         ],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
         },
       },
     ],
   },
-  mode: mode,
-  target: target,
-  devtool: 'source-map',
+  mode,
+  target,
+  devtool: "source-map",
   devServer: {
-    contentBase: './build',
+    watchContentBase: true,
+    contentBase: "./build",
     hot: true,
+    open: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: [".js", ".jsx"],
   },
   plugins: [new MiniCssExtractPlugin()],
 };

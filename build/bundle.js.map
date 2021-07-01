@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack://WEBPACK-05-FULL/./packages/index.ts"],"names":[],"mappings":";;;;;;;AAAA,MAAM,GAAG,GAAW,GAAG,CAAC;AACxB,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC","file":"bundle.js","sourcesContent":["const age: number = 100;\r\nconsole.log(age);"],"sourceRoot":""}
+{"version":3,"sources":["webpack://WEBPACK-05-FULL/./packages/index.ts"],"names":["console","log"],"mappings":"yBACAA,QAAQC,IADY,K","file":"bundle.js","sourcesContent":["const age: number = 100;\r\nconsole.log(age);"],"sourceRoot":""}
